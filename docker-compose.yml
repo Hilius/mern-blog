@@ -1,11 +1,12 @@
 version: '3.9'
 services:
-  mern-tut:
+  mern-blog:
+    container_name: mern_blog
+    restart: always
     build:
       context: ./
     ports:
       - "5555:5555"
-      - "9229:9229"
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
