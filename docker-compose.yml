@@ -7,13 +7,14 @@ services:
       context: ./
     ports:
       - "5555:5555"
+      - "3000:3000"
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
       - JWT_SECRET=mynameissiat
     command: 
       - npm
       - run 
-      - server
+      - dev
